@@ -1,0 +1,141 @@
+.flex-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logoContainer {
+  margin-left: 2rem;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+.homepage img {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.homepage h2 {
+    color: #E83539;
+    font-size: 16rem;
+    text-transform: uppercase;
+    margin: 1.4vh 3vw 0 -50%;
+    text-align: right;
+    width: 100%;
+    // padding: 15vh 0;
+}
+
+.loading-text {
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.red-arrow {
+    position: fixed;
+    bottom: 5vh;
+    left: 91%;
+    z-index: 1;
+}
+
+.red-arrow rect {
+    fill: rgb(15, 15, 15);
+    transform: translateY(100%);
+    transition: transform .4s ease-in-out;
+}
+
+.red-arrow:hover rect{
+    fill: #E83539;
+    transform: translateY(0);
+    transform: translateY(2px);
+}
+
+main-loader{
+    height: 100vh;
+    background-color: rgb(15, 15, 15);
+}
+
+.main-fader{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(15, 15, 15);
+    .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .loading-svg {
+        height: 300px;
+        display: block;
+        margin: 0 auto;
+        path {
+        animation-duration: 1s;
+        animation-name: pulse;
+        animation-iteration-count: infinite;
+        color: #26a380;
+
+        &.path-7 {
+            animation-delay: -1s
+        }
+        &.path-6 {
+            animation-delay: -.875s
+        }
+        &.path-5 {
+            animation-delay: -.75s
+        }
+        &.path-4 {
+            animation-delay: -.625s
+        }
+        &.path-3 {
+            animation-delay: -.5s
+        }
+        &.path-2 {
+            animation-delay: -.375s
+        }
+        &.path-1 {
+            animation-delay: -.25s
+        }
+        &.path-0 {
+            animation-delay: -.125s
+        }
+        }
+    }
+    }
+}
+
+@keyframes pulse {
+    0%     { opacity: .1; }
+    30%    { opacity: .8; }
+    100%   { opacity: .1; }
+}
+
+
+
+@media only screen and (max-width:415px) {
+    .homepage {
+      img {
+        width: 90vw;
+      }
+      h2 {
+        font-size: 4.8rem;
+      }
+    }
+    .loading-text {
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+    }
+    .red-arrow {
+      bottom: 2.5vh;
+      left: 77%;
+    }
+}

@@ -1,0 +1,81 @@
+.league-section {
+  margin: 0 40px;
+}
+
+.listContainer {
+  margin-left: 11%;
+  margin-top: -19vh;
+}
+
+.list-element {
+  list-style-type: none;
+  margin-block: .75rem;
+  line-height: 2.8rem;
+}
+
+.bigLetters {
+  font-size: 30rem;
+  color: rgb(15, 15, 15);
+  background-color:  rgb(15, 15, 15);
+  text-shadow: -1px -1px 0 #E83539, 1px -1px 0 #E83539, -1px 1px 0 #E83539, 1px 1px 0 #E83539;
+}
+
+.league-link {
+  text-decoration: none;
+  color: white;
+  letter-spacing: .1rem;
+  font-size: 1rem;
+  display: inline-block;
+  background-image: linear-gradient(#E83539 0 0);
+  background-position: 0 100%;
+  background-size: 0% 15px;
+  background-repeat: no-repeat;
+  transition:
+  background-size 0.3s,
+  background-position 0s 0.3s;
+}
+
+.league-link:hover {
+  background-position: 0 100%;
+  background-size: 100% 15px;
+}
+
+.league-link-league {
+  font-family: 'montserrat';
+  font-size:3.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-bottom: 30vh;
+  overflow-y: scroll;
+}
+
+.league-link-sport {
+  font-family: 'montserrat';
+  font-size: 2rem;
+  font-weight: 400;
+  padding-left: 1.5rem;
+}
+
+
+@media only screen and (max-width: 415px) {
+  .league-section {
+    margin: 0 15px;
+  }
+  .league-link-league {
+    font-size:2rem;
+    font-weight: 600;
+  }
+  .league-link-sport {
+    font-size: 1.3rem;
+    font-weight: 200;
+    padding-left: 0.1rem;
+  }
+  .listContainer {
+    margin-left: 19%;
+    margin-right: 2%;
+    margin-top: -13vh;
+  }
+  .bigLetters {
+    font-size: 15rem;
+  }
+}
